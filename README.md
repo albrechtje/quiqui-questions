@@ -40,7 +40,9 @@ For `multiple` choice, `correct` lists the correct option letters:
 The optional `config.yaml` file at the root of the repo configures the session:
 
 ```yaml
-session_id: python101
+session_url: python101
+title: Python 101
 ```
 
-- **session_id** — a stable, human-readable identifier for the student join URL (e.g. `/join/python101`). If omitted, QuiQui generates a random short ID each time a question is activated. Using a fixed `session_id` means students can stay on the same URL across multiple questions in a lecture.
+- **session_url** — a stable, human-readable identifier for the student join URL (e.g. `/join/python101`). If omitted, QuiQui generates a random short ID each time a question is activated. Using a fixed `session_url` means students can stay on the same URL across multiple questions in a lecture.
+- **title** — optional display name shown in the header and browser tab of both the teacher and student views, formatted as `QuiQui: <title>`.
