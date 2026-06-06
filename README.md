@@ -20,7 +20,7 @@ Each question is a YAML list item with the following fields:
 | `correct` | yes | Correct answer letter(s) — bare letter for single (`B`), block sequence for multiple; teacher-only, never shown to students |
 | `explanation` | no | Optional explanation shown only to the teacher |
 
-The `correct` field uses answer letters (`A`, `B`, `C`, …) — upper or lower case both work. It is used by the teacher's **Show answer** button to highlight the correct options for the whole room.
+The `correct` field uses answer letters (`A`, `B`, `C`, …) — upper or lower case both work. It is used by the teacher's **✓ Reveal** button to highlight the correct options for the whole room.
 
 For a single correct answer, use a bare letter. For multiple correct answers, use a block sequence.
 
