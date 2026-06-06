@@ -1,5 +1,7 @@
 # Lecture 3 — Mathematics: Linear Algebra & Statistics
 
+# ── Linear Algebra ────────────────────────────────────────────────────────────
+
 - question: |
     Let $A = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}$. What is $\det(A)$?
   type: single
@@ -23,17 +25,33 @@
   explanation: "A · (0,1)ᵀ = (0, 5)ᵀ = 5 · (0,1)ᵀ. The standard basis vectors are eigenvectors of diagonal matrices."
 
 - question: |
-    A dataset has values $\{2, 4, 4, 4, 5, 5, 7, 9\}$.
+    What is true for an **orthogonal matrix** $Q$?
+  type: multiple
+  answers:
+    - "$Q^T Q = I$"
+    - "$\\det(Q) = 0$"
+    - "$Q^{-1} = Q^T$"
+    - "The columns of $Q$ form an orthonormal basis"
+  correct:
+    - A
+    - C
+    - D
+  explanation: "By definition, QᵀQ = I, so Q⁻¹ = Qᵀ. The determinant is ±1, not 0 (orthogonal matrices are invertible)."
 
-    What is the **variance** $\sigma^2$?
+# ── Statistics ────────────────────────────────────────────────────────────────
+
+- question: |
+    A dataset has values $\{1, 2, 3, 4, 5\}$.
+
+    What is the **variance** $\sigma^2$ (population variance)?
   type: single
   answers:
     - "$2$"
-    - "$4$"
     - "$3$"
+    - "$4$"
     - "$5$"
-  correct: B
-  explanation: "Mean = 5. Variance = average squared deviation = (9+1+1+1+0+0+4+16)/8 = 32/8 = 4."
+  correct: A
+  explanation: "Mean = 3. Squared deviations: 4, 1, 0, 1, 4. Variance = 10/5 = 2."
 
 - question: "Which of the following statements about the normal distribution $\\mathcal{N}(\\mu, \\sigma^2)$ are true?"
   type: multiple
@@ -49,28 +67,14 @@
   explanation: "The normal distribution is symmetric, so mean = median = mode. The 68-95-99.7 rule gives the interval coverage."
 
 - question: |
-    What is true for an **orthogonal matrix** $Q$?
-  type: multiple
-  answers:
-    - "$Q^T Q = I$"
-    - "$\\det(Q) = 0$"
-    - "$Q^{-1} = Q^T$"
-    - "The columns of $Q$ form an orthonormal basis"
-  correct:
-    - A
-    - C
-    - D
-  explanation: "By definition, QᵀQ = I, so Q⁻¹ = Qᵀ. The determinant is ±1, not 0 (orthogonal matrices are invertible)."
-
-- question: |
     Two random variables $X$ and $Y$ have correlation $\rho = 0$.
 
     What can you conclude?
   type: single
   answers:
-    - "X and Y are independent"
-    - "X and Y are linearly uncorrelated"
-    - "Knowing X tells you nothing about Y"
+    - "$X$ and $Y$ are independent"
+    - "$X$ and $Y$ are linearly uncorrelated"
+    - "Knowing $X$ tells you nothing about $Y$"
     - "The covariance $\text{Cov}(X, Y) > 0$"
   correct: B
   explanation: "Zero correlation means no linear relationship. X and Y can still be dependent in a non-linear way (e.g. Y = X²)."
