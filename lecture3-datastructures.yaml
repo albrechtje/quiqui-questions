@@ -7,7 +7,8 @@
     - "`dict`"
     - "`list`"
     - "`frozenset`"
-  correct: "C — Lists are ordered and allow duplicate values."
+  correct: [C]
+  explanation: "Lists are ordered and allow duplicate values."
 
 - question: |
     What is the output of this code?
@@ -22,7 +23,8 @@
     - "`0`"
     - "`KeyError`"
     - "An empty string"
-  correct: "C — Accessing a missing key raises a KeyError. Use `d.get('c')` to get None instead."
+  correct: [C]
+  explanation: "Accessing a missing key raises a KeyError. Use `d.get('c')` to get None instead."
 
 - question: "Which of the following are true about Python sets?"
   type: multiple
@@ -31,7 +33,8 @@
     - "Sets allow duplicate values"
     - "Sets support membership testing with `in`"
     - "Sets can contain lists as elements"
-  correct: "A, C — Sets are unordered, deduplicate automatically, and support fast `in` checks. Lists are unhashable so cannot be set elements."
+  correct: [A, C]
+  explanation: "Sets are unordered, deduplicate automatically, and support fast `in` checks. Lists are unhashable so cannot be set elements."
 
 - question: "Which method removes and returns the last element of a list?"
   type: single
@@ -40,7 +43,8 @@
     - "`list.pop()`"
     - "`list.delete()`"
     - "`list.discard()`"
-  correct: "B — pop() without an argument removes and returns the last element."
+  correct: [B]
+  explanation: "pop() without an argument removes and returns the last element."
 
 - question: "Which of the following create a dictionary in Python?"
   type: multiple
@@ -49,4 +53,5 @@
     - "`dict(key='value')`"
     - "`['key', 'value']`"
     - "`dict([('key', 'value')])`"
-  correct: "A, B, D — C creates a list, not a dictionary."
+  correct: [A, B, D]
+  explanation: "C creates a list, not a dictionary."

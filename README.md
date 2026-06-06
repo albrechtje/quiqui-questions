@@ -10,14 +10,17 @@ Each `.yaml` file in this repo represents one lecture's questions. Point QuiQui 
 
 ## Question format
 
-Each question is a YAML list item with four fields:
+Each question is a YAML list item with the following fields:
 
 | Field | Required | Description |
 |---|---|---|
 | `question` | yes | Question text — plain text, Markdown, or LaTeX |
 | `type` | yes | `single` (one answer) or `multiple` (one or more) |
 | `answers` | yes | List of answer options |
-| `correct` | no | Teacher-only note, never shown to students |
+| `correct` | yes | List of correct answer letters, e.g. `[B]` or `[A, C, D]` — teacher-only, never shown to students |
+| `explanation` | no | Optional explanation shown only to the teacher |
+
+The `correct` field uses answer letters (`A`, `B`, `C`, …) — upper or lower case both work. It is used by the teacher's **Show answer** button to highlight the correct options for the whole room.
 
 ### Single choice
 
@@ -29,7 +32,8 @@ Each question is a YAML list item with four fields:
     - "`3`"
     - "`4`"
     - "`2`"
-  correct: "B — // is floor division. 7 / 2 = 3.5, floored to 3."
+  correct: [B]
+  explanation: "// is floor division. 7 / 2 = 3.5, floored to 3."
 ```
 
 ### Multiple choice
@@ -43,7 +47,8 @@ Each question is a YAML list item with four fields:
     - "`char`"
     - "`str`"
     - "`bool`"
-  correct: "A, B, D, E — Python has no char type."
+  correct: [A, B, D, E]
+  explanation: "Python has no char type; single characters are strings of length 1."
 ```
 
 ### Code blocks
@@ -63,7 +68,8 @@ Use a YAML block scalar (`|`) for multi-line question text with fenced code bloc
     - "`1 2 3`"
     - "`0 1 2`"
     - "`0 1 2 3`"
-  correct: "B — range(3) produces 0, 1, 2."
+  correct: [B]
+  explanation: "range(3) produces 0, 1, 2."
 ```
 
 ### LaTeX mathematics
@@ -76,7 +82,8 @@ Use `$...$` for inline math and `$$...$$` for a centred display block. Both work
   answers:
     - "$a^2 + b^2$"
     - "$a^2 + 2ab + b^2$"
-  correct: "B — $(a+b)^2 = a^2 + 2ab + b^2$."
+  correct: [B]
+  explanation: "$(a+b)^2 = a^2 + 2ab + b^2$."
 ```
 
 ```yaml
@@ -88,7 +95,8 @@ Use `$...$` for inline math and `$$...$$` for a centred display block. Both work
   answers:
     - "$\dfrac{n(n+1)}{2}$"
     - "$n^2$"
-  correct: "A — Gauss's formula."
+  correct: [A]
+  explanation: "Gauss's formula."
 ```
 
 Code and math can be combined freely in the same question.
