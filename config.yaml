@@ -1,6 +1,11 @@
 # Stable URL segment for the student join link: /join/<session_url>
 # Students can bookmark this — it stays the same across all questions in a lecture.
 # If omitted, a random short ID is generated each time a question is activated.
+#
+# IMPORTANT: session_url must be unique across all users of the same QuiQui instance.
+# Generic names like "python101" or "demo" will conflict if two lecturers use the same name
+# at the same time. Include an organisation or course abbreviation to make it unique,
+# e.g. "tum-python101", "ki-zentrum-demo".
 session_url: demo
 
 # Display name shown in the header and browser tab as "QuiQui: <title>"

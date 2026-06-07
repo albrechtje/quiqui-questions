@@ -167,6 +167,8 @@ session_url: demo
 title: Demo Quiz
 ```
 
+> **`session_url` must be unique across all users of the same QuiQui instance.** If two lecturers use the same name (e.g. `demo` or `python101`) at the same time, the second pull will fail with a conflict error. Prefix your URL with an organisation or course abbreviation to avoid clashes — for example `tum-python101` or `ki-zentrum-demo`.
+
 ---
 
 ## Files in this repo
