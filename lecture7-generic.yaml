@@ -21,35 +21,35 @@
 - question: "Choose one or more answers! (A - E)"
   type: multiple
   answers:
-    - "A"
-    - "B"
-    - "C"
-    - "D"
-    - "E"
+    - "... is correct"
+    - "... is correct"
+    - "... is correct"
+    - "... is correct"
+    - "... is correct"
 
 # ── Yes / No ──────────────────────────────────────────────────────────────────
 
 - question: "What do you think? (Yes / No)"
   type: single
   answers:
-    - "A — Yes"
-    - "B — No"
+    - "Yes"
+    - "No"
 
 # ── True / False ──────────────────────────────────────────────────────────────
 
 - question: "Is the statement true or false?"
   type: single
   answers:
-    - "A — True"
-    - "B — False"
+    - "True"
+    - "False"
 
 # ── Agreement scale: Strongly agree … Strongly disagree ──────────────────────
 
 - question: "What is your rating?"
   type: single
   answers:
-    - "A — Strongly agree"
-    - "B — Agree"
-    - "C — Neutral"
-    - "D — Disagree"
-    - "E — Strongly disagree"
+    - "Strongly agree"
+    - "Agree"
+    - "Neutral"
+    - "Disagree"
+    - "Strongly disagree"

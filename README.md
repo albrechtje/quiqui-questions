@@ -109,40 +109,43 @@ Code and math can be combined freely in the same question.
 
 ### Generic / unscored questions
 
-Omit `correct` when the question text lives in your slides and you only need QuiQui to collect votes. The Reveal button is hidden automatically.
+Omit `correct` when the question text lives in your slides and you only need QuiQui to collect votes. The Reveal button is hidden automatically. Each answer option is labelled with a letter badge (A, B, C, …) — students pick the letter shown on the slide.
+
+`lecture7-generic.yaml` contains ready-to-use templates. Examples:
 
 ```yaml
-# A–D single choice — display the question in your slides
-- question: "(see slide)"
+# A–D single choice
+- question: "Choose your answer! (A, B, C, D)"
   type: single
   answers:
-    - "A"
-    - "B"
-    - "C"
-    - "D"
+    - "... is correct"
+    - "... is correct"
+    - "... is correct"
+    - "... is correct"
 
 # Yes / No
-- question: "(see slide)"
+- question: "What do you think? (Yes / No)"
   type: single
   answers:
-    - "A — Yes"
-    - "B — No"
+    - "Yes"
+    - "No"
 
 # True / False
-- question: "(see slide)"
+- question: "Is the statement true or false?"
   type: single
   answers:
-    - "A — True"
-    - "B — False"
+    - "True"
+    - "False"
 
-# Multiple choice A–D — students may select more than one
-- question: "(see slide)"
-  type: multiple
+# 5-point agreement scale
+- question: "What is your rating?"
+  type: single
   answers:
-    - "A"
-    - "B"
-    - "C"
-    - "D"
+    - "Strongly agree"
+    - "Agree"
+    - "Neutral"
+    - "Disagree"
+    - "Strongly disagree"
 ```
 
 > **YAML escaping:** inside quoted strings (`"..."`) backslashes must be doubled: `\\frac`, `\\sum`. Inside block scalars (`|`) a single backslash is fine: `\frac`, `\sum`.
