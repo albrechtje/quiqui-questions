@@ -8,7 +8,7 @@
 
 # ── Single choice: A / B / C / D ─────────────────────────────────────────────
 
-- question: "Choose your answer!"
+- question: "Choose your answer! (A, B, C, D)"
   type: single
   answers:
     - "A"
@@ -18,7 +18,7 @@
 
 # ── Multiple choice: A / B / C / D / E ────────────────────────────────────────
 
-- question: "Choose one or more answers!"
+- question: "Choose one or more answers! (A - E)"
   type: multiple
   answers:
     - "A"
@@ -29,7 +29,7 @@
 
 # ── Yes / No ──────────────────────────────────────────────────────────────────
 
-- question: "What do you think?"
+- question: "What do you think? (Yes / No)"
   type: single
   answers:
     - "A — Yes"
