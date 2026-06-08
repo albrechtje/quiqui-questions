@@ -165,9 +165,18 @@ session_url: demo
 # Display name shown in the header and browser tab as "QuiQui: <title>"
 # Appears on both teacher and student views.
 title: Demo Quiz
+
+# Optional: a custom shortlink students can type instead of the long /join/ URL.
+# student_shortlink: https://t.ly/your-code
 ```
 
 > **`session_url` must be unique across all users of the same QuiQui instance.** If two lecturers use the same name (e.g. `demo` or `python101`) at the same time, the second pull will fail with a conflict error. Prefix your URL with an organisation or course abbreviation to avoid clashes — for example `tum-python101` or `ki-zentrum-demo`.
+
+### Optional: `student_shortlink`
+
+The student join URL (`/join/<session_url>`) can be long and awkward to type. If you set up a shortlink on any URL shortener (e.g. [t.ly](https://t.ly), bit.ly, or your institution's own service) and point it at your join URL, add it as `student_shortlink` and QuiQui will show it in the teacher view (below the student link) and on the projector view in place of the long join URL — handy to read out or put on a slide. The QR code still encodes the real join URL, so scanning always works.
+
+QuiQui treats it as display-only: it does **not** create the shortlink or check where it points, so make sure your shortener actually redirects to `<your-quiqui-host>/join/<session_url>`.
 
 ---
 
