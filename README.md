@@ -1,4 +1,4 @@
-# Demo questions for QuiQui - the completely free and open iteractive lecture quiz tool
+# Demo questions for QuiQui - the completely free and open interactive lecture quiz tool
 
 Sample question files for [QuiQui](https://github.com/albrechtje/quiqui), a live audience response tool for university lectures.
 
