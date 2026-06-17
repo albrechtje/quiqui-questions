@@ -1,4 +1,4 @@
-# quiqui-questions
+# Demo questions for QuiQui - the completely free and open iteractive lecture quiz tool
 
 Sample question files for [QuiQui](https://github.com/albrechtje/quiqui), a live audience response tool for university lectures.
 
@@ -240,7 +240,26 @@ session_url: demo
 title: Demo Quiz
 ```
 
-> **`session_url` must be unique across all users of the same QuiQui instance.** If two lecturers use the same name (e.g. `demo` or `python101`) at the same time, the second pull will fail with a conflict error. Prefix your URL with an organisation or course abbreviation to avoid clashes — for example `tum-python101` or `ki-zentrum-demo`.
+> **`session_url` must be unique across all users of the same QuiQui instance.** See [Choosing a `session_url`](#choosing-a-session_url) below — getting this wrong silently merges two lecturers' sessions.
+
+### Choosing a `session_url`
+
+A session is identified by its `session_url`, **not by the lecturer**. Everyone running with the same `session_url` on the same server at the same time shares **one** live session — the same active question, the same vote tally, the same results. Two lecturers who collide will silently overwrite each other's active question and mix their students' votes together. (The session only fails with an explicit conflict error in one narrow case: two *different* repos declaring the same `session_url` at the same time. Sharing the *same* repo gives no error at all — everyone just lands in one shared session.)
+
+This is easy to get wrong, because the natural choice is a generic abbreviation of the lecture — `databases`, `programming`, `nlp`. **These are exactly the names most likely to collide**, because another lecturer teaching the same subject will reach for the same word. The same trap applies if you and colleagues share one question repo: you all inherit its single `session_url`.
+
+**Best practice — prefix with abbreviations that no one else would use.** Combine institution + course + lecturer (or any subset that makes it unmistakably yours):
+
+| ❌ Too generic (will collide) | ✅ Unique |
+|---|---|
+| `databases` | `thn-db-alb` (TH Nürnberg · Databases · Albrecht) |
+| `programming` | `tum-prog1-mueller` |
+| `nlp` | `lmu-nlp-ws25` |
+| `demo` | `ki-zentrum-demo` |
+
+The `session_url` only needs to be unique among sessions running **at the same time** on the same server — but since you can't know what colleagues picked, a personal prefix is the safe default. Pick it once, put the QR code in your slides, and it stays stable for the whole semester.
+
+> If you and colleagues want to run the **same demo** simultaneously, each of you must fork this repo and give your fork a unique `session_url`.
 
 ### Optional: `student_shortlink`
 
